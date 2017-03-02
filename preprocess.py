@@ -3,6 +3,7 @@ import re
 import json
 import os
 import sqlite3
+import logging
 #import lda
 #from sklearn.feature_extraction.text import CountVectorizer
 import itertools
@@ -12,7 +13,8 @@ import nltk
 import nltk.tokenize
 from nltk.tokenize import MWETokenizer
 
-
+logging.basicConfig(format='%(levelname)s : %(message)s', level=logging.INFO)
+logging.root.level = logging.INFO  # ipython sometimes messes up the logging setup; restore
 
 conn = sqlite3.connect('rechtspraak.db')
 c = conn.cursor()
@@ -25,7 +27,7 @@ def tokenize(text):
     #tokenizeMulti = MWETokenizer([('artikel', '6')])       #Kan dit met regex?
     #print(tokenized)
     #tokenized2 = tokenizeMulti.tokenize(tokenized)
-    return [w.lower for w in tokenized if not re.match( "[^a-zA-Z\d\s€]",w)]
+    return [w.lower() for w in tokenized if not re.match( "[^a-zA-Z\d\s€]",w)]
 
 
 rows = c.execute('SELECT id, text from uitspraken').fetchall()
@@ -45,14 +47,42 @@ print(texts[0])
 
 print("Now count frequencies\n")
 #count frequencies
-freqdist = nltk.FreqDist()
-for text in texts:
-    #for word in text:
-    freqdist.update(text)
+# freqdist = nltk.FreqDist()
+# for text in texts:
+#     #for word in text:
+#     freqdist.update(text)
+#
+# print("finished counting, remove 100 most common words and words occuring only once")
+# common = freqdist.most_common(100)
+# hapaxes = freqdist.hapaxes()
 
-print("finished counting")
-print(freqdist.most_common(50))
-print(freqdist.hapaxes()[:50])
+
+
+
+dictionary = gensim.corpora.Dictionary(texts)
+print(dictionary)
+
+#removing words occuring in less than 5 documents, words appearing in more than 80% of the documents and the 100 most frequent words
+dictionary.filter_extremes(5, 0.5)
+dictionary.
+dictionary.filter_n_most_frequent(100)
+
+#create bag of words for each doc.
+print("prep done, creating bow")
+corpus =  [dictionary.doc2bow(text) for text in texts]
+
+
+#Do I need this?:
+#  gensim.corpora.MmCorpus.serialize('/tmp/hr.mm', corpus)
+print("bow done")
+
+# tfidf = gensim.models.TfidfModel(corpus, id2word=dictionary)
+# corpus_tfidf = tfidf[corpus]
+print("run LDA")
+ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=100, passes=3, id2word=dictionary)
+corpus_lda = ldamodel[corpus]
+
+ldamodel.print_topics(num_topics = -1)
 
 
 #Testjes voor tokenizing
