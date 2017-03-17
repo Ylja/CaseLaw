@@ -2,7 +2,6 @@
 
 # In[1]:
 
-from __future__ import absolute_import
 from lxml import etree
 import re
 import os
@@ -11,14 +10,14 @@ import zipfile
 
 # In[11]:
 
-conn = sqlite3.connect(u'rechtspraak.db')
+conn = sqlite3.connect('rechtspraak.db')
 c = conn.cursor()
 
 # In[3]:
 
 # Create table
-c.execute(u''' DROP TABLE IF EXISTS uitspraken''')
-c.execute(u''' CREATE TABLE uitspraken
+c.execute(''' DROP TABLE IF EXISTS uitspraken''')
+c.execute(''' CREATE TABLE uitspraken
             (id text PRIMARY KEY,
             xml text,
             text text
@@ -29,12 +28,12 @@ c.execute(u''' CREATE TABLE uitspraken
 # In[4]:
 
 def retrieve_from_web(ecli):
-    link = u'http://data.rechtspraak.nl/uitspraken/content?id=' + ecli
+    link = 'http://data.rechtspraak.nl/uitspraken/content?id=' + ecli
     try:
         return etree.ElementTree().parse(link)
-    except Exception, e:
-        print u'online retrieval fails' + link
-        print e
+    except Exception as e:
+        print('online retrieval fails' + link)
+        print(e)
         return None
 
 # unzip uitspraken:
@@ -43,37 +42,34 @@ def retrieve_from_web(ecli):
 def retrieve_from_filesystem(ecli, rootpath):
     #zf = zipfile.ZipFile(rootpath)
     year = ecli[11:15]
-    fn = unicode(year) + u'/' + re.sub(u':', u'_', ecli) + u'.xml'
+    fn = str(year) + '/' + re.sub(':', '_', ecli) + '.xml'
     #file = (zf.open(fn))
-    path = os.path.join(rootpath, fn).encode()
+    path = os.path.join(rootpath, fn)
     try:
         return etree.ElementTree().parse(path)
-    except Exception, e:
+    except Exception as e:
 
         #print('Exception: ', path)
-        #print e
+        print(e)
         return retrieve_from_web(ecli)
         #return None
 
 
 # In[5]:
 
-rootpath = u'/media/ylja/DATA/scriptie/open-data'
+rootpath = '/home/ylja/Uni/Thesis/OpenData'
 
 
 # In[ ]:
 
 def insert_into_uitspraken(id0, element, curs):
-    uitspraken = list(element.iterchildren(u'{*}uitspraak'))
+    uitspraken = list(element.iterchildren('{*}uitspraak'))
     if len(uitspraken) > 0:
         uitspraak = uitspraken[0]
         uitspraak_xml = etree.tostring(uitspraak)
-        #print uitspraak_xml
-        uitspraak_text = u' '.join([e.text for e in uitspraak.iterdescendants() if e.text is not None])
-        #print u'Dit is de uitspraak aan elkaar \n {0}' .format(uitspraak_text)
+        uitspraak_text = ' '.join([e.text for e in uitspraak.iterdescendants() if e.text is not None])
         # remove consecutive spaces
-        uitspraak_text = re.sub(u' +', u' ', uitspraak_text)
-        #print u'Dit is de uiteindelijke uitspraak text \n {0}' .format(uitspraak_text)
+        uitspraak_text = re.sub(' +', ' ', uitspraak_text)
         query = ''' INSERT OR REPLACE INTO uitspraken
         VALUES (?, ?, ?)
         '''
@@ -82,7 +78,7 @@ def insert_into_uitspraken(id0, element, curs):
 
 # In[ ]:
 
-ids = c.execute(u'SELECT id from uitspraken_meta')
+ids = c.execute('SELECT id from uitspraken_meta')
 c2 = conn.cursor()
 for row in ids:
     ecli = row[0]
@@ -93,7 +89,7 @@ conn.commit()
 
 # In[12]:
 
-c.execute(u'SELECT count(*) from uitspraken').fetchall()
+c.execute('SELECT count(*) from uitspraken').fetchall()
 
 # In[13]:
 

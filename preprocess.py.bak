@@ -1,4 +1,3 @@
-from __future__ import absolute_import
 from lxml import etree
 import re
 import json
@@ -13,13 +12,12 @@ import six
 import gensim
 import nltk
 import nltk.tokenize
-from io import open
 
 
-logging.basicConfig(format=u'%(levelname)s : %(message)s', level=logging.INFO)
+logging.basicConfig(format='%(levelname)s : %(message)s', level=logging.INFO)
 logging.root.level = logging.INFO  # ipython sometimes messes up the logging setup; restore
 
-conn = sqlite3.connect(u'rechtspraak.db')
+conn = sqlite3.connect('rechtspraak.db')
 c = conn.cursor()
 
 
@@ -30,25 +28,26 @@ def tokenize(text):
     #tokenizeMulti = MWETokenizer([('artikel', '6')])       #Kan dit met regex?
     #print(tokenized)
     #tokenized2 = tokenizeMulti.tokenize(tokenized)
-    return [unicode(w.lower()) for w in tokenized if not re.match( u'[^a-zA-uZ\d\s]',w)] # nEED to declare encoding
+    return [w.lower() for w in tokenized if not re.match( '[^a-zA-uZ\d\s€]',w)] # nEED to declare encoding
 
 
-rows = c.execute(u'SELECT id, text from uitspraken').fetchall()
+rows = c.execute('SELECT id, text from uitspraken').fetchall()
 
-print u"tokenize\n"
-if not os.path.isfile(u'result.json'):
-    print u"new tokinizing"
-    fp = open(u'result.json', u'w')
+print("tokenize\n")
+if not os.path.isfile('result.json'):
+    print("new tokinizing")
+    fp = open('result.json', 'w')
     texts = [tokenize(text) for id0, text in rows]
-    json.dump(unicode(texts),fp)
+    texts = [parse()]
+    json.dump(texts,fp)
 else:
-    print u"used saved json"
-    fp = open(u'result.json', u'r')
+    print("used saved json")
+    fp = open('result.json', 'r')
     texts = json.load(fp)
 
-print texts[0]
+print(texts[0])
 
-print u"Now count frequencies\n"
+print("Now count frequencies\n")
 #count frequencies
 # freqdist = nltk.FreqDist()
 # for text in texts:
@@ -63,28 +62,32 @@ print u"Now count frequencies\n"
 
 
 dictionary = gensim.corpora.Dictionary(texts)
-print dictionary
+print(dictionary)
 
 #removing words occuring in less than 5 documents, words appearing in more than 80% of the documents and the 100 most frequent words
 dictionary.filter_extremes(5, 0.5)
 dictionary.filter_n_most_frequent(100)
 
 #create bag of words for each doc.
-print u"prep done, creating bow"
+print("prep done, creating bow")
 corpus =  [dictionary.doc2bow(text) for text in texts]
 
 
 #Do I need this?:
 #  gensim.corpora.MmCorpus.serialize('/tmp/hr.mm', corpus)
-print u"bow done"
+print("bow done")
 
 # tfidf = gensim.models.TfidfModel(corpus, id2word=dictionary)
 # corpus_tfidf = tfidf[corpus]
-print u"run LDA"
+print("run LDA")
 ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=100, passes=3, id2word=dictionary)
 corpus_lda = ldamodel[corpus]
 
 ldamodel.print_topics(num_topics = -1)
 
 
-
+#Testjes voor tokenizing
+# s = "1.5		ACM heeft bij besluit van 21 oktober 2010 (het primaire besluit) aan appellante een boete opgelegd van € 2.020.000,-- wegens overtreding van artikel 6, eerste lid, van de Mw."
+# s = "ACM heeft bij besluit van 21 oktober 2010 (het primaire besluit) aan appellante een boete opgelegd van € 2.020.000,-- wegens overtreding van artikel 6, eerste lid, van de Mw"
+# stemmer.stem('23a')
+# print(tokenize(s))

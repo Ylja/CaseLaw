@@ -3,8 +3,6 @@
 
 # In[1]:
 
-from __future__ import division
-from __future__ import absolute_import
 import re
 import os
 import sqlite3
@@ -13,7 +11,7 @@ import pandas as pd
 
 # In[2]:
 
-conn = sqlite3.connect(u'rechtspraak.db')
+conn = sqlite3.connect('rechtspraak.db')
 c = conn.cursor()
 
 
@@ -29,11 +27,11 @@ c = conn.cursor()
 
 # number of uitspraken_meta
 
-s = c.execute(u'SELECT COUNT(*) FROM UITSPRAKEN_META').fetchall()[0]
-print u'\'Uitspraken\' with Metadata: '+ unicode(s[0])
+s = c.execute('SELECT COUNT(*) FROM UITSPRAKEN_META').fetchall()[0]
+print('\'Uitspraken\' with Metadata: '+ str(s[0]))
 
 #How many 'uitspraken' do we have?
-print u'\'Uitspraken\': '+unicode(c.execute(u'''select count(*) from uitspraken''').fetchall()[0])
+print('\'Uitspraken\': '+str(c.execute('''select count(*) from uitspraken''').fetchall()[0]))
 
 
 # sort by summary
@@ -57,17 +55,17 @@ print u'\'Uitspraken\': '+unicode(c.execute(u'''select count(*) from uitspraken'
 # In[8]:
 
 def nr_of_fields_id(text):
-    return len(text.split(u':'))
+    return len(text.split(':'))
 
 def year_from_id(text):
-    return text.split(u':')[3]
+    return text.split(':')[3]
 
 def instantie_from_id(text):
-    return text.split(u':')[2]
+    return text.split(':')[2]
 
-conn.create_function(u'nr_of_fields_id', 1, nr_of_fields_id)
-conn.create_function(u'year_from_id', 1, year_from_id)
-conn.create_function(u'instantie_from_id', 1, instantie_from_id)
+conn.create_function('nr_of_fields_id', 1, nr_of_fields_id)
+conn.create_function('year_from_id', 1, year_from_id)
+conn.create_function('instantie_from_id', 1, instantie_from_id)
 conn.commit()
 
 
@@ -85,31 +83,31 @@ conn.commit()
 # pd.DataFrame(nrfields_counts.fetchall())
 
 
-wc = c.execute(u'''SELECT length(text) - length(replace(text, ' ', '')) + 1 FROM UITSPRAKEN''')
+wc = c.execute('''SELECT length(text) - length(replace(text, ' ', '')) + 1 FROM UITSPRAKEN''')
 sum = 0
 amount = 0
 for text in wc.fetchall():
     sum+= text[0]
     amount += 1
 avg = sum/amount
-print u'Average amount of words in \'uitspraken\': ' + unicode(avg) + u'\n'
+print('Average amount of words in \'uitspraken\': ' + str(avg) + '\n')
 
 
 #  from which courts do the 'uitspraken come from?'
 
-instantie_counts = c.execute(u''' SELECT instantie_from_id(id), count(*) 
+instantie_counts = c.execute(''' SELECT instantie_from_id(id), count(*) 
                 FROM UITSPRAKEN_META group by instantie_from_id(id) 
 ''')
-print pd.DataFrame(instantie_counts.fetchall())
+print(pd.DataFrame(instantie_counts.fetchall()))
 
 
 # From which year are the 'uitspraken'
 
-year_counts = c.execute(u''' SELECT year_from_id(id), count(*) 
+year_counts = c.execute(''' SELECT year_from_id(id), count(*) 
                 FROM UITSPRAKEN_META group by year_from_id(id) 
                 order by year_from_id(id) 
 ''')
-print pd.DataFrame(year_counts.fetchall())
+print(pd.DataFrame(year_counts.fetchall()))
 
 
 # In[15]:

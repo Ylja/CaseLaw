@@ -1,2 +1,4 @@
 *.db
 result.json
+/docs
+/stemmeddocs
