@@ -18,7 +18,7 @@ def tokenizing(text):
 
 rows =  c.execute(u'SELECT id, text from uitspraken')
 for row in rows:
-    file = 'docs/' + row[0] + '.json'
+    file = 'docs/' + rows[0] + '.json'
     fp = codecs.open(file, 'w', encoding='utf-8')
     t = tokenizing(row[1])
     json.dump(t, fp, encoding='utf-8', ensure_ascii=False)
