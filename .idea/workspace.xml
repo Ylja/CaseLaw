@@ -2,49 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ba8da95-4664-4c27-a70f-39835c6eea55" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prepTopicsForUse.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/amount of words.ods" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs build dict 1.odt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs build dict 2.odt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs build dict 3.odt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old code + backs/Analyse.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old code + backs/Analyse.py.bak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old code + backs/TopicModellingLDAtestYlja.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old code + backs/prep2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old code + backs/preprocess.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old code + backs/preprocess.py.bak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old code + backs/retrieveXML_meta.py.bak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old code + backs/retrieveXML_uitspraak.py.bak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/py2/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/py2/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/py2/.idea/py2.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/py2/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.5100.dict" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.5100.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.5100.mm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.5100.mm.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.7100.dict" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.7100.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.7100.mm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.7100.mm.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.9100.dict" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.9100.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.9100.mm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.9100.mm.index" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code + backs/__init__.py" afterPath="$PROJECT_DIR$/dictionaryStatistics.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/prepTopics.py" afterPath="$PROJECT_DIR$/boxplot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.99100.dict" afterPath="$PROJECT_DIR$/saveLDA/caseLaw20.99100.dict" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.99100.mm" afterPath="$PROJECT_DIR$/saveLDA/caseLaw20.99100.mm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.99100.mm.index" afterPath="$PROJECT_DIR$/saveLDA/caseLaw20.99100.mm.index" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.fuse_hidden00010db800000004" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buildDict.py" afterPath="$PROJECT_DIR$/buildDict.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buildDictJustTok.py" afterPath="$PROJECT_DIR$/buildDictJustTok.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/experiments.py" afterPath="$PROJECT_DIR$/experiments.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/retrieveXML_meta.py" afterPath="$PROJECT_DIR$/retrieveXML_meta.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/retrieveXML_uitspraak.py" afterPath="$PROJECT_DIR$/retrieveXML_uitspraak.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saveLDA/caseLaw20.99100.json" afterPath="$PROJECT_DIR$/saveLDA/caseLaw20.99100.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stemm.py" afterPath="$PROJECT_DIR$/stemm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tokens.py" afterPath="$PROJECT_DIR$/tokens.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,18 +31,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dictionaryStatistics.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dictionaryStatistics.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="stemming test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stemming test.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,68 +41,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stemm.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="stemm.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stemm.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="prepTopicsForUse.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prepTopicsForUse.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="58" lean-forward="false" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="buildDict.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildDict.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="59" column="18" lean-forward="false" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stopwords.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stopwords.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="3" lean-forward="false" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="find probs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/find probs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="boxplot.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/boxplot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -205,6 +97,7 @@
         <option value="$PROJECT_DIR$/buildDict.py" />
         <option value="$PROJECT_DIR$/dictionaryStatistics.py" />
         <option value="$PROJECT_DIR$/boxplot.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -630,29 +523,8 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/retrieveXML_uitspraak.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="73" lean-forward="false" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py" />
+    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py" />
     <entry file="file://$PROJECT_DIR$/retrieveXML_meta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -668,21 +540,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py" />
+    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py" />
     <entry file="file://$PROJECT_DIR$/retrieveXML_meta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -698,21 +557,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py" />
+    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py" />
     <entry file="file://$PROJECT_DIR$/retrieveXML_meta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -728,21 +574,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py" />
+    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py" />
     <entry file="file://$PROJECT_DIR$/retrieveXML_meta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -758,21 +591,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py" />
+    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py" />
     <entry file="file://$PROJECT_DIR$/result.json" />
     <entry file="file://$USER_HOME$/anaconda3/envs/caseLawPy2/lib/python2.7/encodings/utf_8.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -814,35 +634,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/prep2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/retrieveXML_uitspraak.py.bak">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/TopicModellingLDAtestYlja.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/old code + backs/prep2.py" />
+    <entry file="file://$PROJECT_DIR$/old code + backs/retrieveXML_uitspraak.py.bak" />
+    <entry file="file://$PROJECT_DIR$/old code + backs/TopicModellingLDAtestYlja.ipynb" />
+    <entry file="file://$PROJECT_DIR$/old code + backs/preprocess.py" />
     <entry file="file://$USER_HOME$/anaconda3/envs/caseLawPy2/lib/python2.7/site-packages/gensim/corpora/dictionary.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3315">
@@ -885,7 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
           <caret line="74" column="12" lean-forward="false" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,13 +702,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="35" column="3" lean-forward="false" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buildDict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
+        <state relative-caret-position="222">
           <caret line="59" column="18" lean-forward="false" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -933,29 +725,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/old code + backs/Analyse.py" />
     <entry file="file://$PROJECT_DIR$/dictionaryStatistics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/textsNoStem.json">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/textsNoStem.json" />
     <entry file="file://$PROJECT_DIR$/stemming test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -964,30 +742,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stemm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/prepTopicsForUse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="5" column="58" lean-forward="false" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/amount of words.ods">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/amount of words.ods" />
     <entry file="file://$PROJECT_DIR$/find probs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1007,9 +769,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stemm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
