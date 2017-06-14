@@ -3,8 +3,8 @@ from pattern.text.nl import parsetree
 import json
 import codecs
 
-readdir =  '/media/ylja/DATA/scriptie/code/docs/'
-writedir = '/media/ylja/DATA/scriptie/code/stemmeddocs/'
+readdir =  '/media/ylja/DATA/scriptie/code/heldoutdocs/'
+writedir = '/media/ylja/DATA/scriptie/code/heldoutdocs/stemmeddocs/'
 
 def stem(text):
     t = parsetree(text,tokenize=False,lemmata=True)

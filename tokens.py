@@ -14,11 +14,11 @@ c = conn.cursor()
 
 def tokenizing(text):
     tokenized = nltk.word_tokenize(text)
-    return [w for w in tokenized if not re.match( u'[^a-zA-uZ\d\s]',w)]
+    return [w.lower() for w in tokenized if not re.match( u'[^a-zA-uZ\d\s]',w)]
 
 rows =  c.execute(u'SELECT id, text from uitspraken')
 for row in rows:
-    file = 'docs/' + rows[0] + '.json'
+    file = 'docs/' + row[0] + '.json'
     fp = codecs.open(file, 'w', encoding='utf-8')
     t = tokenizing(row[1])
     json.dump(t, fp, encoding='utf-8', ensure_ascii=False)

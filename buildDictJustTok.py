@@ -35,7 +35,7 @@ if not os.path.isfile('/media/ylja/DATA/scriptie/code/textsJustTok.json'):
             if os.stat(path).st_size > 5000:
                 fp = codecs.open(path, 'r', encoding='utf-8')
                 text = json.load(fp)
-                texts.append([concats(word) for word in text])
+                texts.append(text)
                 fp.close()
                 read += 1
             else:
@@ -53,7 +53,7 @@ else:
     texts = json.load(fp)
 
 dictionary = gensim.corpora.Dictionary(texts)
-dictionary.save('saveLDA/caseLawBase.dict')
+dictionary.save('saveLDA/caseLawBaseJustTok.dict')
 
 # #removing words occuring in less than 5 documents, words appearing in more than 80% of the documents and the 100 most frequent words
 def createDictAndCorpus(less, more, mostfrequent,texts):
@@ -61,27 +61,26 @@ def createDictAndCorpus(less, more, mostfrequent,texts):
     dict = gensim.corpora.Dictionary(texts)
     frequentwords = dict.filter_n_most_frequent(mostfrequent)
     extremes = dict.filter_extremes(less, more, None)
-    dictPath = 'saveLDA/caseLaw' + str(less) + str(more) + str(mostfrequent) + '.dict'
+    dictPath = 'saveLDA/caseLawJustTok' + str(less) + str(more) + str(mostfrequent) + '.dict'
     dict.save(dictPath)
     #build corpus
     corpus = [dict.doc2bow(text) for text in texts]
-    corpPath = 'saveLDA/caseLaw' + str(less) + str(more) + str(mostfrequent) + '.mm'
+    corpPath = 'saveLDA/caseLawJustTok' + str(less) + str(more) + str(mostfrequent) + '.mm'
     gensim.corpora.MmCorpus.serialize(corpPath, corpus)
     #save removed words
-    remWordsPath = 'saveLDA/caseLaw' + str(less) + str(more) + str(mostfrequent) + '.json'
+    remWordsPath = 'saveLDA/caseLawJustTok' + str(less) + str(more) + str(mostfrequent) + '.json'
     fp = codecs.open(remWordsPath, 'w', encoding='utf-8')
-    json.dump([frequentwords, extremes], fp)
+    json.dump((frequentwords, extremes), fp)
     fp.close()
 
 
 
 #different word removal
 
-# moreThan = [0.5, 0.7, 0.9, ]
-#
-#
-# for more in moreThan:
-#     createDictAndCorpus(2, more, 100, texts)
+moreThan = [0.5, 0.7, 0.99, ]
 
-createDictAndCorpus(2, 0.99, 100, texts)
+
+for more in moreThan:
+    createDictAndCorpus(2, more, 100, texts)
+
 

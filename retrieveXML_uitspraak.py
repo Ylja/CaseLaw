@@ -17,8 +17,8 @@ c = conn.cursor()
 # In[3]:
 
 # Create table
-c.execute(u''' DROP TABLE IF EXISTS uitspraken''')
-c.execute(u''' CREATE TABLE uitspraken
+c.execute(u''' DROP TABLE IF EXISTS heldout_uitspraken''')
+c.execute(u''' CREATE TABLE heldout_uitspraken
             (id text PRIMARY KEY,
             xml text,
             text text
@@ -68,13 +68,13 @@ def insert_into_uitspraken(id0, element, curs):
     if len(uitspraken) > 0:
         uitspraak = uitspraken[0]
         uitspraak_xml = etree.tostring(uitspraak)
-        #print uitspraak_xml
+        # print uitspraak_xml
         uitspraak_text = u' '.join([e.text for e in uitspraak.iterdescendants() if e.text is not None])
         #print u'Dit is de uitspraak aan elkaar \n {0}' .format(uitspraak_text)
         # remove consecutive spaces
         uitspraak_text = re.sub(u' +', u' ', uitspraak_text)
-        #print u'Dit is de uiteindelijke uitspraak text \n {0}' .format(uitspraak_text)
-        query = ''' INSERT OR REPLACE INTO uitspraken
+        # print u'Dit is de uiteindelijke uitspraak text \n {0}' .format(uitspraak_text)
+        query = ''' INSERT OR REPLACE INTO heldout_uitspraken
         VALUES (?, ?, ?)
         '''
         curs.execute(query, (id0, uitspraak_xml, uitspraak_text))
@@ -82,25 +82,24 @@ def insert_into_uitspraken(id0, element, curs):
 
 # In[ ]:
 
-ids = c.execute(u'SELECT id from uitspraken_meta')
+ids = c.execute(u'SELECT id from heldout_uitspraken_meta')
 c2 = conn.cursor()
 for row in ids:
     ecli = row[0]
-    el = retrieve_from_filesystem(ecli, rootpath)
+    # el = retrieve_from_filesystem(ecli, rootpath)
+    el = retrieve_from_web(ecli)
     if el is not None:
         insert_into_uitspraken(ecli, el, c2)
+    else:
+        print "nothing retrieved from web: " + unicode(ecli)
 conn.commit()
 
-# In[12]:
 
-c.execute(u'SELECT count(*) from uitspraken').fetchall()
-
-# In[13]:
+c.execute(u'SELECT count(*) from heldout_uitspraken').fetchall()
 
 conn.commit()
 conn.close()
 
 
-# In[ ]:
 
 
