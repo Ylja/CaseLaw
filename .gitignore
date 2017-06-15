@@ -1,5 +1,6 @@
 *.db
 result.json
 .fuse_hidden00010db800000004
+tests.json
 /docs
 /stemmeddocs
